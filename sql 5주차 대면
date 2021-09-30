@@ -1,0 +1,26 @@
+select bookname, price from book;
+where price >= 10000;
+select * from customer;
+select distinct publisher from book;
+
+
+select * from book;
+
+select bookname from book order by bookname desc;
+
+select price, bookname from book 
+order by price desc, bookname;
+
+select * from book;
+select distinct publisher form book; 
+
+select publisher, sum(price), avg(price), count(*)
+from book
+where price >= 10000
+group by publisher
+having count(*) >=2; 
+
+select sum(price) 총합계,
+avg(price), count(*)
+from book
+where publisher = '대한미디어';
